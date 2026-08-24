@@ -10,9 +10,6 @@
 .env.local
 .env*.local
 
-# drizzle
-/drizzle/
-
 # misc
 .DS_Store
 *.pem
