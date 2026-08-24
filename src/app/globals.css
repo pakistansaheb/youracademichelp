@@ -1,0 +1,44 @@
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #1a1d29;
+  --muted: #667085;
+  --card: #ffffff;
+  --border: #e5e8f0;
+  --accent: #265bf6;
+  --accent-foreground: #ffffff;
+  --accent-soft: #eaf0ff;
+  --confidence-red: #f04438;
+  --confidence-red-soft: #fef2f1;
+  --confidence-amber: #f6a623;
+  --confidence-amber-soft: #fef6e9;
+  --confidence-green: #1ca789;
+  --confidence-green-soft: #e9f8f4;
+  --radius-card: 1rem;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-muted: var(--muted);
+  --color-card: var(--card);
+  --color-border: var(--border);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-accent-soft: var(--accent-soft);
+  --color-confidence-red: var(--confidence-red);
+  --color-confidence-red-soft: var(--confidence-red-soft);
+  --color-confidence-amber: var(--confidence-amber);
+  --color-confidence-amber-soft: var(--confidence-amber-soft);
+  --color-confidence-green: var(--confidence-green);
+  --color-confidence-green-soft: var(--confidence-green-soft);
+  --font-sans: var(--font-poppins);
+  --radius-card: var(--radius-card);
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans), ui-sans-serif, system-ui, sans-serif;
+}

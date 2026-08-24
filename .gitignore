@@ -1,0 +1,23 @@
+# next.js
+/.next/
+/out/
+
+# dependencies
+/node_modules/
+
+# env files (never commit secrets)
+.env
+.env.local
+.env*.local
+
+# drizzle
+/drizzle/
+
+# misc
+.DS_Store
+*.pem
+npm-debug.log*
+
+# typescript
+*.tsbuildinfo
+next-env.d.ts
