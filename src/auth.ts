@@ -30,12 +30,15 @@ const resendEmailProvider: EmailConfig = {
     }
 
     const resend = new Resend(resendApiKey);
-    await resend.emails.send({
+    const { error } = await resend.emails.send({
       from: emailFrom,
       to: identifier,
       subject: "Sign in to YourAcademicHelp",
       html: `<p>Click below to sign in. This link expires in 24 hours.</p><p><a href="${url}">Sign in to YourAcademicHelp</a></p><p>If you didn't request this, you can ignore this email.</p>`,
     });
+    // The Resend SDK returns an error object rather than throwing, so a
+    // failed send would otherwise look identical to a successful one.
+    if (error) console.error("Resend send failed:", error);
   },
 };
 
