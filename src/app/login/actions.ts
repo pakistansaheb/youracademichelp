@@ -10,6 +10,6 @@ export async function requestMagicLink(formData: FormData) {
 
   if (!email) return;
 
-  await signIn("resend", { email, redirect: false });
+  await signIn("resend", { email, redirect: false, redirectTo: "/dashboard" });
   redirect("/login/check-email");
 }
